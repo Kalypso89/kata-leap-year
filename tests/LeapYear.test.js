@@ -62,4 +62,21 @@ describe('Tests that check if a year is leap', () => {
         //ASSERT: check the scene
         expect(answer_received).toBe(expected_answer);
     });
+    test('Test returns true in the rest of the cases', () => {
+        /*GHERKIN TEST
+            * GIVEN / ARRANGE: a year
+            * WHEN / ACT: when it's divisible by 4, but not by 100
+            * THEN / ASSERT: it returns true as a result
+         */
+        
+        //ARRANGE: prepare the scene
+        const input_year = 96;
+        const expected_answer = true;
+        
+        //ACT: run the scene
+        const answer_received = leap_year.test_leap_year(input_year);
+
+        //ASSERT: check the scene
+        expect(answer_received).toBe(expected_answer);
+    });
 });

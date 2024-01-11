@@ -8,7 +8,8 @@ class LeapYear {
         }
         if (year % 100 == 0) {
             return false;
-        }
+        } 
+        return true;
     }
 };
 
