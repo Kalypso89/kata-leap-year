@@ -29,4 +29,22 @@ describe('Tests that check if a year is leap', () => {
         //ASSERT: comprobar el escenario
         expect(answer_received).toBe(expected_answer);
     });
+    test('Test returns true when the year is divisible by 400', () => {
+        /*
+         * GHERKIN TEST
+            * GIVEN / ARRANGE: un año
+            * WHEN / ACT: cuando éste sea divisible por 400
+            * THEN / ASSERT: devuelve true como resultado
+         */
+        
+        //ARRANGE: preparar el escenario
+        const input_year = 800;
+        const expected_answer = true;
+        
+        //ACT: ejecutar el escenario
+        const answer_received = leap_year.test_leap_year(input_year);
+
+        //ASSERT: comprobar el escenario
+        expect(answer_received).toBe(expected_answer);
+    });
 });
